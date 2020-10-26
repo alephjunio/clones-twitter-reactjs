@@ -35,7 +35,7 @@ const Tweet: React.FC = () => {
             <Dot />
             <time>24 dezembro</time>
           </Header>
-          // eslint-disable-next-line
+
           <Description>Foguete não tem ré 🚀️</Description>
           <ImageContent />
           <Icons>
