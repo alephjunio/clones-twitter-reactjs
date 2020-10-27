@@ -28,6 +28,10 @@ const SideBar: React.FC = () => {
             title="Talvez você curta"
             elements={[
               <FollowSuggestion
+                name="Vinicius Teixeira Barreto"
+                nickname="@v_t-b"
+              />,
+              <FollowSuggestion
                 name="Guilherme Rodz"
                 nickname="@guilherme_rodz"
               />,
@@ -36,19 +40,15 @@ const SideBar: React.FC = () => {
             ]}
           />
           <List
-            title="Oque está acontecendo !"
+            title="Oque há na tecnologia."
             elements={[<News />, <News />, <News />]}
           />
           <List
-            title="Oque está acontecendo !"
+            title="Oque acontece na politica."
             elements={[<News />, <News />, <News />]}
           />
           <List
-            title="Oque está acontecendo !"
-            elements={[<News />, <News />, <News />]}
-          />
-          <List
-            title="Oque está acontecendo !"
+            title="O Tweets mais comentados !"
             elements={[<News />, <News />, <News />]}
           />
         </Body>

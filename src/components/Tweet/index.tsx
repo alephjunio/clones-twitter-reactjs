@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
 
 import {
@@ -18,7 +19,27 @@ import {
   LikeIcon,
 } from './styles';
 
-const Tweet: React.FC = () => {
+interface Props {
+  name: string;
+  nickname: string;
+  day: number;
+  month: string;
+  tweet: string;
+  comments: number;
+  likes: number;
+  retwwets: number;
+}
+
+const Tweet: React.FC<Props> = ({
+  nickname,
+  name,
+  day,
+  month,
+  tweet,
+  comments,
+  likes,
+  retwwets,
+}) => {
   return (
     <Container>
       <Retweeted>
@@ -30,26 +51,27 @@ const Tweet: React.FC = () => {
         <Avatar />
         <Content>
           <Header>
-            <strong>RocketSeat</strong>
-            <span>@rocketSeat</span>
+            <strong>{name}</strong>
+            <span>{nickname}</span>
             <Dot />
-            <time>24 dezembro</time>
+            <time>
+              {day} {month}
+            </time>
           </Header>
-
-          <Description>Foguete não tem ré 🚀️</Description>
+          <Description>{tweet}</Description>
           <ImageContent />
           <Icons>
             <Status>
               <CommentIcon />
-              18
+              {comments}
             </Status>
             <Status>
               <RetweetIcon />
-              18
+              {retwwets}
             </Status>
             <Status>
               <LikeIcon />
-              520
+              {likes}
             </Status>
           </Icons>
         </Content>
